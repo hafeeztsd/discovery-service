@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: discovery-service
+
+     
+server:
+  port: 9091
+  
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9091/eureka
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: localhost
+    non-secure-port: ${server.port}
+
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
+        
+
